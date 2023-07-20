@@ -8,7 +8,11 @@
 #include <QParallelAnimationGroup>
 #include <QtWidgets>
 #include <QPushButton>
-
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QByteArray>
+#include <QPixmap>
 
 class MyTimer : public QObject
 {
@@ -35,17 +39,37 @@ private:
     QPropertyAnimation *m_panelAnim;
     QPropertyAnimation *m_btnAnim;
     QParallelAnimationGroup *m_sidePanelAnim;
+    QMainWindow *m_mainWind;
     QWidget *m_sidePanel;
     QPushButton *m_btn;
-    QMainWindow *m_mainWind;
     bool m_isSidePanelHide = true;
 
 public:
-    SidePanelAnimHelper(QWidget *sidePanel, QPushButton *btn, QMainWindow *mainWind);
+    SidePanelAnimHelper(QMainWindow *mainWind, QWidget *sidePanel, QPushButton *btn);
 
 public slots:
     void hideShowPanel();
 
+};
+
+class FullscreenCamAnimHelper : public QObject
+{
+    Q_OBJECT
+private:
+    QPropertyAnimation *m_fullscrnBtnAnim;
+    QPropertyAnimation *m_videoCamFeedAnim;
+    QPropertyAnimation *m_updCamBtnAnim;
+    QParallelAnimationGroup *m_fullscreenAnim;
+    QMainWindow *m_mainWind;
+    QLabel *m_videoCamFeed;
+    QPushButton *m_fullscrnBtn;
+    QPushButton *m_updCamBtn;
+    bool m_isFullscreenOn = false;
+public:
+    FullscreenCamAnimHelper(QMainWindow *mainWindow, QLabel *videocamFeed,
+                        QPushButton *updCamBtn, QPushButton *fullscreenBtn);
+public slots:
+    void onOffFullscreen();
 };
 
 #endif // MYCLASSES_H
