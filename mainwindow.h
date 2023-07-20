@@ -8,7 +8,10 @@
 #include <QPropertyAnimation>
 #include <QParallelAnimationGroup>
 #include <QProcess>
+#include <QTcpSocket>
+#include <QThread>
 
+#include "mjpegstreamer.h"
 #include "MyClasses.h"
 
 QT_BEGIN_NAMESPACE
@@ -27,15 +30,23 @@ private slots:
     void timerSlot();
     void on_actionRun_model_triggered();
     void on_actionStart_session_triggered();
+    void on_updateCamBtn_clicked();
+    void styleHelperFunction();
+    void on_actionStop_Camera_triggered();
 
+signals:
+    void camStreaming();
 private:
     Ui::MainWindow *ui;
-    MyTimer *SessionTimer;
-    QPropertyAnimation *sidePanelAnim;
-    QPropertyAnimation *sidePanelBtnAnim;
-    QParallelAnimationGroup *sidePanelGroupAnim;
+    MyTimer *sessionTimer;
+    SidePanelAnimHelper *SPAnimHelper;
+    FullscreenCamAnimHelper *FSAnimHelper;
+    QMovie *updateCamBtnAnim;
+
     bool isSidePanelHide = true;
     int posture_points;
     QProcess *modelProcess;
+
+    MJPEGStreamer *streamCam;
 };
 #endif // MAINWINDOW_H
