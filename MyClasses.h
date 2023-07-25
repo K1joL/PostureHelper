@@ -91,20 +91,6 @@ private:
     bool m_isFullscreenOn = false;
 };
 
-class ExerciseBlockAnimHelper : public QObject
-{
-    Q_OBJECT
-public:
-    ExerciseBlockAnimHelper(QWidget *avalExerWidget);
-    virtual ~ExerciseBlockAnimHelper(){}
-public slots:
-    void hideShowBlock();
-
-private:
-    QPropertyAnimation m_blockAnim;
-    QWidget *avalExerWidget;
-};
-
 class UpdateCamButton : public QObject
 {
     Q_OBJECT
