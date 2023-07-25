@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AvailableExerciseWidget</class>
+ <widget class="QWidget" name="AvailableExerciseWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="ExerciseFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>391</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	padding: 0px 0px 0px 5px;
+	font: 11pt ;
+	background-color: rgb(250, 179, 24);
+	color:  rgb(255, 255, 255);
+	font: 75 12pt &quot;Comic Sans MS&quot;;
+	border-radius: 7px;
+}
+QLabel#Exc_header{
+	background-color: rgb(132, 93, 194);
+	font: 14pt ;
+	border-top-left-radius: 0;
+	border-top-right-radius:;
+	border-bottom-left-radius:;
+	border-bottom-right-radius:0;
+	padding: 0px 0px 0px 0px
+;}
+#l1, #l2, #l3, #l4{
+	border-radius:0px;
+	border: 1px solid rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
+}
+#ExerciseFrame{
+	background-color:qlineargradient(spread:pad, x1:0.006, y1:0.477273, x2:1, y2:1, stop:0 rgba(95, 95, 95, 34), stop:1 rgba(255, 255, 255, 41))
+}
+#ExerciseFrame{
+	border-top-left-radius: 7; border-top-right-radius:7; border-bottom-left-radius:7; border-bottom-right-radius:7;
+}
+#Exc_ListFrame{
+	background-color: rgba(255, 255, 255, 0);
+	border: 0px;
+}
+QPushButton{
+	font: 12pt &quot;Comic Sans MS&quot;;
+	border: 0px solid 	rgb(132, 93, 194)	 ;
+	border-radius: 7px;
+	background-color: 	rgb(250, 179, 24)	;
+	color: rgb(245, 246, 250);
+}
+QPushButton:hover{
+	background-color: rgb(0, 201, 183)				;
+}
+QPushButton:pressed{
+	background-color: rgb(0, 193, 174);
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="Exc_header">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>371</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comic Sans MS</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Доступные упражнения</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="l3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>371</width>
+      <height>1</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="l2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>1</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="l4">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>70</y>
+      <width>1</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="Exc_styleFrame2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Exc_styleFrame2{background-color: rgba(255, 255, 255, 0);
+	border:0px;}
+QLabel{
+background-color: rgba(0, 0, 0,0);
+font: 14pt;
+border-radius: 7px;
+padding: 0px 0px 0px 0px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="Exc_pptsLbl_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>0</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Время, оставшееся до разблокировки упражнения.</string>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>КД</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Exc_pptsLbl">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>0</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>PPts</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Exc_pptsLbl_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Время, оставшееся до разблокировки упражнения.</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Текст упражнения</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Exc_pptsLbl_4">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>0</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Время, оставшееся до разблокировки упражнения.</string>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Кол-во</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Exc_ListFrame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>371</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="l1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>1</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <zorder>Exc_styleFrame2</zorder>
+   <zorder>Exc_header</zorder>
+   <zorder>l3</zorder>
+   <zorder>l2</zorder>
+   <zorder>l4</zorder>
+   <zorder>l1</zorder>
+   <zorder>Exc_ListFrame</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

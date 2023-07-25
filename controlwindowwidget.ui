@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControlWindowWidget</class>
+ <widget class="QWidget" name="ControlWindowWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: ;
+	border-radius:7px
+}
+QFrame{
+	background-color: rgb(250, 179, 24);
+	border-radius:7px}
+QListWidget{
+	color: rgb(255, 255, 255);}
+#line,#line_2,#line_3{border-radius:0px;
+border: 1px solid rgb(255, 255, 255) 			;}
+QLabel{
+	background-color: rgb(250, 179, 24);
+	color:  rgb(255, 255, 255);  }
+QLabel#usefulTime_headerC, #CurStBlock_headerC, #BlockClient_VnickC, #modesBlock_headerC, #controlPanel_headerC, #rating_headerC{	background-color: rgb(132, 93, 194)
+;}
+QMenuBar{
+	background-color: rgb(47, 47, 47);
+	border-radius:0;
+}
+#controlWidget{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(148, 9, 223, 255), stop:0.261364 rgba(208, 54, 113, 255), stop:0.5 rgba(228, 109, 69, 255), stop:0.778409 rgba(242, 162, 0, 255), stop:0.994318 rgba(255, 203, 38, 255))
+;
+	border-radius:0;
+	border: 0px;
+}
+QPushButton{
+	font: 75 12pt &quot;Comic Sans MS&quot;;
+	border: 2px solid 	rgb(132, 93, 194)	 ;
+	background-color: 	rgb(250, 179, 24)	;
+	color: rgb(245, 246, 250);
+}
+QPushButton:hover{
+	background-color: rgb(0, 201, 183)				;
+}
+QPushButton:pressed{
+		background-color: rgb(0, 193, 174)		;}
+QLabel{
+	font: 75 12pt &quot;Comic Sans MS&quot;;
+	border-radius: 7px;
+}
+QListView{
+	padding: 20px, 10px, 20px 10px;
+	font: 75 11pt &quot;Comic Sans MS&quot;;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+QScrollBar:vertical 
+{
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical 
+{
+    border: none;
+	min-height: 100px;
+    background-color: rgb(132, 93, 194)
+;}
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical 
+{
+    height: 0px;
+    background-color:	
+;}
+#videofeed_frameC, #sidePanelC, #MainInfoFrameC{
+	background-color:qlineargradient(spread:pad, x1:0.006, y1:0.477273, x2:1, y2:1, stop:0 rgba(95, 95, 95, 34), stop:1 rgba(255, 255, 255, 41))
+}
+#sidePanelC{
+	border-radius: 7px;
+}
+#MainInfoFrame{
+	border-radius: 7px;
+}</string>
+  </property>
+  <widget class="QWidget" name="controlWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1030</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QPushButton" name="sideBtnC">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>60</y>
+      <width>31</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+font-size: 16px;
+border-radius:0px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 15px;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="videofeed_frameC">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>50</y>
+      <width>631</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="MainInfoFrameC">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>261</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#usefulTime_headerC, #CurStBlock_headerC, #BlockClient_VnickC, #modesBlock_headerC, #controlPanel_headerC{	
+	border-top-left-radius: ;
+	border-top-right-radius:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:;
+	font: 75 14pt;	
+}
+QPushButton{
+padding: 5px, 0px, 0px, 0px;
+border: 2px solid rgb(132, 93, 194);
+border-radius:7px;
+}
+QPushButton:hover{
+border: 2px border: 2px solid rgb(132, 93, 194);;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="CurrStateBlockC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>241</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="CurStBlock_headerC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Текущее положение</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurStBlock_Vneck">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Шея</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurStBlock_Vback">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Спина</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>220</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurStBlock_Vlleg">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>69</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Л. Нога</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CurStBlock_Vrleg">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>70</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>П. Нога</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>40</y>
+        <width>1</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <zorder>CurStBlock_Vneck</zorder>
+     <zorder>CurStBlock_Vback</zorder>
+     <zorder>CurStBlock_Vlleg</zorder>
+     <zorder>CurStBlock_Vrleg</zorder>
+     <zorder>line_3</zorder>
+     <zorder>line_2</zorder>
+     <zorder>CurStBlock_headerC</zorder>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>1</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="modesFrameC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>390</y>
+       <width>241</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="mainModeBtnC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>122</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-bottom-right-radius: 0px;</string>
+      </property>
+      <property name="text">
+       <string>Главная</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="exerciseModeBtnC">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>20</y>
+        <width>121</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-bottom-left-radius: 0px;</string>
+      </property>
+      <property name="text">
+       <string>Упражнения</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="modesBlock_headerC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Переход</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="usefulTimeBlockC">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>10</y>
+       <width>111</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="usefulTime_headerC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p style=&quot;line-height:0.1&quot;&gt;&lt;span&gt;Полезное&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;время:&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="indent">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="usefulTime_VusefulTimerC">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>00:00:00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>usefulTime_VusefulTimerC</zorder>
+     <zorder>usefulTime_headerC</zorder>
+    </widget>
+    <widget class="QFrame" name="ControlPanelBlockC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>241</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius: 0px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="controlPanel_headerC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Панель управления</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="calibrationBtnC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>122</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Калибровка</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startBtnC">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>20</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Начать</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="availableExercisesBtnC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>89</y>
+        <width>241</width>
+        <height>42</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding: 0px;
+border-bottom-right-radius: 7px;
+border-bottom-left-radius: 7px;</string>
+      </property>
+      <property name="text">
+       <string>Доступные упражнения</string>
+      </property>
+     </widget>
+     <zorder>calibrationBtnC</zorder>
+     <zorder>startBtnC</zorder>
+     <zorder>availableExercisesBtnC</zorder>
+     <zorder>controlPanel_headerC</zorder>
+    </widget>
+    <zorder>usefulTimeBlockC</zorder>
+    <zorder>CurrStateBlockC</zorder>
+    <zorder>line</zorder>
+    <zorder>modesFrameC</zorder>
+    <zorder>ControlPanelBlockC</zorder>
+   </widget>
+   <widget class="QWidget" name="sidePanelC" native="true">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>50</y>
+      <width>201</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#rating_headerC{
+	border-top-left-radius: 0;
+	border-top-right-radius:;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	font: 75 14pt ;
+}</string>
+    </property>
+    <widget class="QListView" name="ratingOfClientsC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>181</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="movement">
+      <enum>QListView::Static</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::TopToBottom</enum>
+     </property>
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <property name="viewMode">
+      <enum>QListView::ListMode</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rating_headerC">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Comic Sans MS</family>
+       <pointsize>14</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#BlockClient_Vnick{
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Рейтинг</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <zorder>videofeed_frameC</zorder>
+   <zorder>MainInfoFrameC</zorder>
+   <zorder>sidePanelC</zorder>
+   <zorder>sideBtnC</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
