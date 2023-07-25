@@ -20,6 +20,35 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+
+        videocamfeedwidget.h
+        videocamfeedwidget.cpp
+        videocamfeedwidget.ui
+
+        exercisewindowwidget.h
+        exercisewindowwidget.cpp
+        exercisewindowwidget.ui
+
+        controlwindowwidget.h
+        controlwindowwidget.cpp
+        controlwindowwidget.ui
+
+        availableexercisewidget.h
+        availableexercisewidget.cpp
+        availableexercisewidget.ui
+
+        exerciseobject.h
+        exerciseobject.cpp
+        exerciseobject.ui
+
+        clientinfowidget.h
+        clientinfowidget.cpp
+        clientinfowidget.ui
+
+        dialogwindowwidget.h
+        dialogwindowwidget.cpp
+        dialogwindowwidget.ui
+
         MyClasses.cpp
         MyClasses.h
         mjpegstreamer.cpp
