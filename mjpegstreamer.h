@@ -5,7 +5,10 @@
 #include <QLabel>
 #include <QObject>
 #include <QTcpSocket>
-
+/*
+ * Source:
+ * https://github.com/grizzlei/qt-mjpeg-streamer.git
+*/
 class MJPEGStreamer : public QLabel
 {
     Q_OBJECT
