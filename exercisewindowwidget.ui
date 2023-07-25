@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExerciseWindowWidget</class>
+ <widget class="QWidget" name="ExerciseWindowWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: rgb(255, 255, 255);
+	border-radius:7px
+}
+QFrame{
+	background-color: rgb(250, 179, 24);
+	border-radius:7px}
+QListView{
+	color: rgb(255, 255, 255);}
+#line_2{border-radius:0px;
+border: 1px solid rgb(255, 255, 255) 			;}
+QLabel{
+	background-color: rgb(250, 179, 24);
+	color:  rgb(255, 255, 255);  }
+QLabel#usefulTime_headerE, #ChExBlock_headerE, #BlockClient_VnickE, #modesBlock_headerE, #controlPanel_headerE, #rating_headerE{	background-color: rgb(132, 93, 194)
+;}
+QMenuBar{
+	background-color: rgb(47, 47, 47);
+	border-radius:0;
+}
+#exerciseWidget{
+	background-color:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(148, 9, 223, 255), stop:0.261364 rgba(208, 54, 113, 255), stop:0.5 rgba(228, 109, 69, 255), stop:0.778409 rgba(242, 162, 0, 255), stop:0.994318 rgba(255, 203, 38, 255));
+	border:0px;
+	border-radius:0;
+}
+QPushButton{
+	font: 75 12pt &quot;Comic Sans MS&quot;;
+	border: 2px solid 	rgb(132, 93, 194)	 ;
+	background-color: 	rgb(250, 179, 24)	;
+	color: rgb(245, 246, 250);
+}
+QPushButton:hover{
+	background-color: rgb(0, 201, 183)				;
+}
+QPushButton:pressed{
+		background-color: rgb(0, 193, 174)		;}
+QLabel{
+	font: 75 12pt &quot;Comic Sans MS&quot;;
+	border-radius: 7px;
+}
+QListView{
+	padding: 20px, 10px, 20px 10px;
+	font: 75 11pt &quot;Comic Sans MS&quot;;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+QScrollBar:vertical 
+{
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical 
+{
+    border: none;
+	min-height: 100px;
+    background-color: rgb(132, 93, 194)
+;}
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical 
+{
+    height: 0px;
+    background-color:	
+;}
+#videofeed_frameE, #sidePanelE, #MainInfoFrameE{
+	background-color:qlineargradient(spread:pad, x1:0.006, y1:0.477273, x2:1, y2:1, stop:0 rgba(95, 95, 95, 34), stop:1 rgba(255, 255, 255, 41))
+}
+#sidePanelE{
+	border-radius: 7px;
+}
+#MainInfoFrameE{
+	border-radius: 7px;
+}</string>
+  </property>
+  <widget class="QWidget" name="exerciseWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1031</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <widget class="QFrame" name="MainInfoFrameE">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>261</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#usefulTime_headerE, #ChExBlock_headerE, #BlockClient_VnickE, #modesBlock_headerE, #controlPanel_headerE{	
+	border-top-left-radius: ;
+	border-top-right-radius:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:;
+	font: 75 14pt;	
+}
+QPushButton{
+padding: 5px, 0px, 0px, 0px;
+border: 2px solid rgb(132, 93, 194);
+border-radius:7px;
+}
+QPushButton:hover{
+border: 2px border: 2px solid rgb(132, 93, 194);;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="ChosenExerciseBlockE">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>241</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="ChExBlock_headerE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Выбрано</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ChExBlock_ExersiceRepetionLblE">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Повторений осталось:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ChExBlock_VexerciseNameE">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Название</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ChExBlock_VrepetitionE">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>73</y>
+        <width>47</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>1</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="modesFrameE">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>390</y>
+       <width>241</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="mainModeBtnE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>122</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-bottom-right-radius: 0px;</string>
+      </property>
+      <property name="text">
+       <string>Главная</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="controlModeBtnE">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>20</y>
+        <width>121</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-bottom-left-radius: 0px;</string>
+      </property>
+      <property name="text">
+       <string>Контроль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="modesBlock_headerE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Переход</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="usefulTimeBlockE">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>10</y>
+       <width>111</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="usefulTime_headerE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p style=&quot;line-height:0.1&quot;&gt;&lt;span&gt;Полезное&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;время:&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="indent">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="usefulTime_VusefulTimerE">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>00:00:00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>usefulTime_VusefulTimerE</zorder>
+     <zorder>usefulTime_headerE</zorder>
+    </widget>
+    <widget class="QFrame" name="ControlPanelBlockE">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>241</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius: 0px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="controlPanel_headerE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>14</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Панель управления</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="instructionBtnE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>122</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Инструкция</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startBtnE">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>20</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Начать</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="availableExerecisesBtnE">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>89</y>
+        <width>241</width>
+        <height>42</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding: 0px;
+border-bottom-right-radius: 7px;
+border-bottom-left-radius: 7px;</string>
+      </property>
+      <property name="text">
+       <string>Доступные упражнения</string>
+      </property>
+     </widget>
+     <zorder>instructionBtnE</zorder>
+     <zorder>startBtnE</zorder>
+     <zorder>availableExerecisesBtnE</zorder>
+     <zorder>controlPanel_headerE</zorder>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="sideBtnE">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>60</y>
+      <width>31</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+font-size: 16px;
+border-radius:0px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 15px;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="videofeed_frameE">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>50</y>
+      <width>631</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="sidePanelE" native="true">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>50</y>
+      <width>201</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#rating_headerE{
+	border-top-left-radius: 0;
+	border-top-right-radius:;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	font: 75 14pt ;
+}</string>
+    </property>
+    <widget class="QListView" name="ratingOfClientsE">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>181</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="movement">
+      <enum>QListView::Static</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::TopToBottom</enum>
+     </property>
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <property name="viewMode">
+      <enum>QListView::ListMode</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rating_headerE">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Comic Sans MS</family>
+       <pointsize>14</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#BlockClient_Vnick{
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Рейтинг</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <zorder>videofeed_frameE</zorder>
+   <zorder>MainInfoFrameE</zorder>
+   <zorder>sideBtnE</zorder>
+   <zorder>sidePanelE</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
